@@ -61,6 +61,18 @@ Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s`
 
 **===>**
 
+Added by Nepax
+If you encounter the issue of jq
+jq: parse error: Invalid numeric literal at line 1, column 10
+
+Follow below steps:
+1. wget -O jq https://github.com/jqlang/jq/releases/download/jq-1.6/jq-linux64
+2. sudo apt remove jq
+3. chmod +x ./jq
+4. sudo cp jq /usr/bin
+
+5. Or simply clone this repo
+6. And follow from step 3 but dont forget to run step 2 to remove existing jq that is making the issue.
 
 ```
 cat results.txt | egrep 'http|https' > endpoints.txt
